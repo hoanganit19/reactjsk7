@@ -1,0 +1,15 @@
+.product-info{
+    width: 500px;
+    margin: 30px auto;
+    border: 1px solid red;
+    padding: 30px;
+}
+
+.user-lists .user-item{
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}

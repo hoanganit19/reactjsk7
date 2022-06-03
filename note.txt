@@ -1,0 +1,7 @@
+MPA = Multi Page Application
+- HTML sẽ được render từ Back-End
+- Mỗi khi có Request => Tải về tất cả tài nguyên
+
+SPA = Single Page Application
+- HTML sẽ được render từ Front-End (JS)
+- Mỗi khi có Request => Chỉ tải về tài nguyên yêu cầu
