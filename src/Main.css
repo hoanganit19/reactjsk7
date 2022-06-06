@@ -13,3 +13,7 @@
     width: 200px;
     height: auto;
 }
+
+.member-box{
+    border-bottom: 1px solid #ccc;
+}

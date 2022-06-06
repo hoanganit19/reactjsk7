@@ -5,3 +5,19 @@ MPA = Multi Page Application
 SPA = Single Page Application
 - HTML sẽ được render từ Front-End (JS)
 - Mỗi khi có Request => Chỉ tải về tài nguyên yêu cầu
+
+Ví dụ: Components lồng nhau:
+
+1. Member
+
+2. MemberInfo
+
+3. Avatar
+
+Yêu cầu:
+
+- Avatar nằm trong MemberInfo 
+
+- MemberInfo nằm trong Member 
+
+- App => Gọi Member, props sẽ truyền vào Member

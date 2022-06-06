@@ -6,7 +6,8 @@ import './Main.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Menu from './components/main/Menu';
-
+import Member from './components/Member';
+import Comment from './components/Comment';
 
 function App() {
 
@@ -91,6 +92,66 @@ function App() {
       );
   });
 
+  const memberInfo = {
+    name: 'Tạ Hoàng An',
+    age: 30,
+    addressShipping: 'Hà Nội'
+  }
+
+  const memberListsArr = [
+    {
+        name: 'Tạ Hoàng An',
+        age: 30,
+        addressShipping: 'Hà Nội',
+        comment: {
+          subject: 'Comment user 01',
+          content: 'Content user 01'
+        }
+    },
+
+    {
+      name: 'Văn Quân',
+      age: 35,
+      addressShipping: 'Đà Nẵng',
+      comment: {
+        subject: 'Comment user 02',
+        content: 'Content user 02'
+      }
+    },
+
+    {
+      name: 'Nguyễn Chí Ngọc',
+      age: 20,
+      addressShipping: 'Hồ Chí Minh',
+      comment: {
+        subject: 'Comment user 03',
+        content: 'Content user 03'
+      }
+    },
+
+    {
+      name: 'Minh Thức',
+      age: 30,
+      addressShipping: 'Quảng Nam',
+      comment: {
+        subject: 'Comment user 04',
+        content: 'Content user 04'
+      }
+    }
+  ];
+
+  const memberRender = memberListsArr.map((item, index)=>{
+      return (
+        <Member key={index} name={item.name} age={item.age} addressShipping={item.addressShipping} comment={<Comment subject={item.comment.subject} content={item.comment.content}/>}/>
+        
+      );
+  }); 
+
+  const member = {
+    image: 'https://picsum.photos/100',
+    name: 'Hoàng An',
+    age: 30
+  };
 
   return (
     <>
@@ -109,6 +170,11 @@ function App() {
       <Header></Header>
       <main>
           <Menu></Menu>
+          {/* <Member name={memberInfo.name} age={memberInfo.age} addressShipping={memberInfo.addressShipping}/> */}
+          {/* <Member name="Văn Quân" age="35" addressShipping="Hồ Chí Minh"/>
+          <Member name="Nguyễn Chí Ngọc" age="20" addressShipping=""/> */}
+          {/* {memberRender} */}
+          <Member image={member.image} name={member.name} age={member.age} />
       </main>
       <Footer></Footer>
     </>
